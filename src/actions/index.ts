@@ -16,3 +16,7 @@ export async function deleteSnippet(id: number) {
   await db.snippet.delete({ where: { id } });
   redirect('/');
 }
+
+export async function createSnippet(formState:{message: string}, formData: FormData) {
+  return {message: 'title and code are required'}
+}
